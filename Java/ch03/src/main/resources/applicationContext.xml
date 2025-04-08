@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="initSampleData" class="chapter03.utils.InitSampleData">
+        <property name="sNums">
+            <array>
+                <value>spring01</value>
+                <value>spring02</value>
+                <value>spring03</value>
+                <value>spring04</value>
+                <value>spring05</value>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="studentDao" class="chapter03.dao.StudentDao" />
+
+    <bean id="studentService" class="chapter03.service.StudentService">
+        <constructor-arg ref="studentDao" />
+    </bean>
+
+    <bean id="printStudentInformationService" class="chapter03.service.PrintStudentInformationService">
+        <constructor-arg ref="studentService" />
+    </bean>
+
+    <!-- 개발용 -->
+    <bean id="dev_dbConnectionInfo" class="chapter03.DBConnectionInfo">
+        <property name="url" value="127.0.0.1" />
+        <property name="username" value="test" />
+        <property name="password" value="1234" />
+    </bean>
+
+    <!-- 실사용 -->
+    <bean id="real_dbConnectionInfo" class="chapter03.DBConnectionInfo">
+        <property name="url" value="000.000.000.000" />
+        <property name="username" value="master" />
+        <property name="password" value="1234" />
+    </bean>
+
+    <bean id="emsInformationService" class="chapter03.service.EMSInformationService">
+        <property name="info">
+            <value>Education Management System program was developed in 2025.</value>
+        </property>
+        <property name="copyright">
+            <value>COPYRIGHT(C) 2025 DAELIM UNIVERSITY COLLEGE. ALL RIGHT RESERVED.</value>
+        </property>
+        <property name="version">
+            <value>The version is 1.0</value>
+        </property>
+
+        <property name="sYear" value="2025" />
+        <property name="sMonth" value="03" />
+        <property name="sDay" value="01" />
+        <property name="eYear" value="2025" />
+        <property name="eMonth" value="03" />
+        <property name="eDay" value="26" />
+
+        <property name="developers">
+            <list>
+                <value>Dev01</value>
+                <value>Dev02</value>
+                <value>Dev03</value>
+            </list>
+        </property>
+
+        <property name="administrators">
+            <map>
+                <entry>
+                    <key>
+                        <value>dev01</value>
+                    </key>
+
+                    <value>dev01@test.com</value>
+                </entry>
+
+                <entry>
+                    <key>
+                        <value>dev02</value>
+                    </key>
+
+                    <value>dev02@test.com</value>
+                </entry>
+            </map>
+        </property>
+
+        <property name="dbInfos">
+            <map>
+                <entry>
+                    <key>
+                        <value>dev</value>
+                    </key>
+                    <ref bean="dev_dbConnectionInfo" />
+                </entry>
+
+                <entry>
+                    <key>
+                        <value>real</value>
+                    </key>
+                    <ref bean="real_dbConnectionInfo" />
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "tWalk" class = "chapter02.TransportationWalk" />
+
+    <bean id = "calAdd" class = "function.CalAdd" />
+    <bean id = "calSub" class = "function.CalSub" />
+    <bean id = "calMul" class = "function.CalMul" />
+    <bean id = "calDiv" class = "function.CalDiv" />
+
+    <bean id = "myCalculator" class = "function.MyCalculator" />
+
+    <bean id = "calAssembler" class = "function.CalAssembler">
+        <constructor-arg ref = "myCalculator" />
+        <constructor-arg ref = "calAdd" />
+        <constructor-arg ref = "calSub" />
+        <constructor-arg ref = "calMul" />
+        <constructor-arg ref = "calDiv" />
+    </bean>
+</beans>
