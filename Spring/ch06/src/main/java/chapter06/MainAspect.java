@@ -8,10 +8,16 @@ public class MainAspect {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppContext.class);
 
         Calculator calculator = context.getBean("calculator", Calculator.class);
+        /*
         long result = calculator.factorial(3);
         System.out.println(result);
         System.out.println(calculator.getClass().getSimpleName());
+        */
 
+        calculator.factorial(7);
+        calculator.factorial(7);
+        calculator.factorial(5);
+        calculator.factorial(5);
         context.close();
     }
 }

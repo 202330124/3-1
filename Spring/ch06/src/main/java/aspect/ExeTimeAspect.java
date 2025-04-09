@@ -5,10 +5,12 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 
 import java.util.Arrays;
 
 @Aspect
+@Order(1)
 public class ExeTimeAspect {
     // Pointcut: 공통 기능을 적용할 대상을 설정한다.
     // chapter06 패키지와 그 하위 패키지에 public 메서드

@@ -1,5 +1,6 @@
 package config;
 
+import aspect.CachedAspect;
 import chapter06.Calculator;
 import aspect.ExeTimeAspect;
 import chapter06.RecCalculator;
@@ -18,5 +19,10 @@ public class AppContext {
     @Bean
     public Calculator calculator() {
         return new RecCalculator();
+    }
+
+    @Bean
+    public CachedAspect cachedAspect() {
+        return new CachedAspect();
     }
 }
