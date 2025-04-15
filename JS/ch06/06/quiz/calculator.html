@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>사칙연산 계산기</title>
+</head>
+<body>
+    <h1>사칙연산 계산기</h1>
+    <div>
+        <input type="text" id="firstNum" placeholder="숫자 1">
+        <input type="text" id="secondNum" placeholder="숫자 2">
+    </div>
+    <div>
+        <button id="add" onclick="calculator('+')">+</button>
+        <button id="sub" onclick="calculator('-')">-</button>
+        <button id="multi" onclick="calculator('*')">*</button>
+        <button id="divide" onclick="calculator('/')">/</button>
+    </div>
+    <div id="result"></div>
+    <script src="../js/calculator.js"></script>
+</body>
+</html>
