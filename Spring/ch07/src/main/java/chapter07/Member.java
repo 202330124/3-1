@@ -60,5 +60,7 @@ public class Member {
         if(!password.equals(oldPassword)) {
             throw new IllegalArgumentException("Passwords do not match");
         }
+
+        this.password = newPassword;
     }
 }
