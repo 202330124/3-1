@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>이벤트 전파</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="image"></div>
+            <button id="changeImageBtn">사진 바꾸기</button>
+        </div>
+
+        <script>
+            const container = document.querySelector("#container");
+            const imageDiv = document.querySelector("#image");
+            const changeImageBtn = document.querySelector("#changeImageBtn");
+
+            container.addEventListener("click", function(e) {
+                console.log("이벤트 캡쳐링");
+
+                if(e.target === changeImageBtn) {
+                    e.stopImmediatePropagation();
+                    console.log("이벤트 전파를 막았으므로 사진은 바뀌지 않습니다.");
+                }
+            }, true);
+
+            changeImageBtn.addEventListener("click", function() {
+                console.log("버튼 클릭됨 - 사진 바뀌는 이벤트");
+                imageDiv.style.backgroundImage = "url('../images/pic-3.jpg')"
+            });
+        </script>
+    </body>
+</html>
