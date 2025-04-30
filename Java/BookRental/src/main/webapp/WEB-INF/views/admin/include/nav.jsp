@@ -1,16 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 25. 4. 30.
-  Time: 오후 4:24
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<link href="<c:url value='/resources/css/admin/include/nav.css' />" rel="stylesheet" type="text/css">
+
+<nav>
+    <div id="nav_wrap">
+        <div class="menu">
+            <ul>
+                <li><a href="<c:url value='/admin/admin/account/loginForm' /> ">로그인</a></li>
+                <li><a href="<c:url value='/admin/admin/account/admin/account/createAccountForm' /> ">회원가입</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <form>
+                <input type="text" name="b_name" placeholder="Enter the name of book you are looking for." />
+                <input type="button" value="Search" />
+            </form>
+        </div>
+    </div>
+</nav>

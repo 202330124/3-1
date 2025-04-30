@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/admin/account")
-public class AdminHomeController {
+public class AdminAccountController {
     @GetMapping("/createAccountForm")
     public String createAccountForm() {
         return "/admin/account/create_account_form";
