@@ -7,8 +7,8 @@
     <div id="nav_wrap">
         <div class="menu">
             <ul>
-                <li><a href="<c:url value='/admin/admin/account/loginForm' /> ">로그인</a></li>
-                <li><a href="<c:url value='/admin/admin/account/admin/account/createAccountForm' /> ">회원가입</a></li>
+                <li><a href="<c:url value='/admin/account/loginForm' /> ">로그인</a></li>
+                <li><a href="<c:url value='/admin/account/createAccountForm' /> ">회원가입</a></li>
             </ul>
         </div>
 

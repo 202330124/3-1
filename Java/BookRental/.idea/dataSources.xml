@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@daelim-spring" uuid="8b33f56a-9e16-4259-9a66-cbdf03255c42">
+    <data-source source="LOCAL" name="@daelim-spring" uuid="f1604c58-53cd-4699-92b9-1036545d1380">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

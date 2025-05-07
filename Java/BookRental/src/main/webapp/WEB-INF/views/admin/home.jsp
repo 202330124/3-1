@@ -14,6 +14,7 @@
 </head>
 <body>
     <jsp:include page="../include/header.jsp" />
+    <jsp:include page="./include/nav.jsp" />
 
     <section>
         <div id="section_wrap">
