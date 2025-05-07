@@ -5,9 +5,11 @@ import chapter10.MemberRegisterService;
 import chapter10.RegisterRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 @Controller
 public class RegisterController {
@@ -54,17 +56,23 @@ public class RegisterController {
     }
 
     @PostMapping("/register/step3")
-    public String handleStep3(@ModelAttribute("registerRequest") RegisterRequest registerRequest) {
+    public String handleStep3(@ModelAttribute("registerRequest") @Valid RegisterRequest registerRequest, Errors errors) {
         System.out.println("handleStep3 >>>");
         System.out.println("email: " + registerRequest.getEmail());
         System.out.println("name: " + registerRequest.getName());
         System.out.println("password: " + registerRequest.getPassword());
         System.out.println("confirmPassword: " + registerRequest.getConfirmPassword());
 
+        // new RegisterRequestValidator().validate(registerRequest, errors);
+        if(errors.hasErrors()) {
+            return "register/step2";
+        }
+
         try {
             memberRegisterService.registerMember(registerRequest);
             return "register/step3";
         } catch(DuplicationMemberException ex) {
+            errors.rejectValue("email", "duplicate");
             return "register/step2";
         }
     }
