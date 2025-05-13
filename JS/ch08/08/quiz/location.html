@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>window.location 예제</title>
+    <script>
+        function showLocationInfo() {
+            alert("현재 URL: " + window.location.href);
+            alert("호스트 이름: " + window.location.hostname);
+            alert("프로토콜: " + window.location.protocol);
+        }
+
+        function moveToGoogle() {
+            window.location.assign("https://www.google.com");
+        }
+
+        function replaceToBing() {
+            window.location.replace("https://www.bing.com");
+        }
+
+        function reloadPage() {
+            window.location.reload(); // 새로고침
+        }
+    </script>
+</head>
+<body>
+    <h1>window.location 객체 예제</h1>
+
+    <button onclick="showLocationInfo()">현재 위치 정보 확인</button><br><br>
+    <button onclick="moveToGoogle()">Google로 이동(기록 남김)</button><br><br>
+    <button onclick="replaceToBing()">Bing으로 이동(기록 없이)</button><br><br>
+    <button onclick="reloadPage()">페이지 새로고침</button>
+</body>
+</html>
