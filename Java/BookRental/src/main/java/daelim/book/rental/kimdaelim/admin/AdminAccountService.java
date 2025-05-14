@@ -2,6 +2,7 @@ package daelim.book.rental.kimdaelim.admin;
 
 import daelim.book.rental.kimdaelim.admin.account.AdminAccountVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,6 +13,9 @@ public class AdminAccountService {
 
     @Autowired
     private AdminAccountDao adminAccountDao;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public int createAccount(AdminAccountVo adminAccountVo) {
         System.out.println("[AdminAccountService] createAccount");
@@ -28,5 +32,18 @@ public class AdminAccountService {
         } else {
             return ADMIN_ACCOUNT_ALREADY_EXISTS;
         }
+    }
+    
+    public AdminAccountVo login(AdminAccountVo adminAccountVo) {
+        // dao 연동해서 처리
+        AdminAccountVo loginedAdminAccountVo = adminAccountDao.selectAdmin(adminAccountVo);
+
+        if(loginedAdminAccountVo != null) {
+            if(bCryptPasswordEncoder.matches(adminAccountVo.getPassword(), loginedAdminAccountVo.getPassword())) {
+                return loginedAdminAccountVo;
+            }
+        }
+
+        return null;
     }
 }

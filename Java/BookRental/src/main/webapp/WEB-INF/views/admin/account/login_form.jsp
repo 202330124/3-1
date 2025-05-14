@@ -22,11 +22,11 @@
             <h3>LOGIN FORM</h3>
         </div>
         <div class="login_form">
-            <form action="" name="login_form">
+            <form method="post" action="<c:url value='/admin/account/loginConfirm' />" name="login_form">
                 <input type="text" name="id" placeholder="input admin id" /><br/>
                 <input type="password" name="password" placeholder="input admin password" /><br/>
 
-                <input type="button" value="login">
+                <input type="button" value="login" onclick="doLogin()">
                 <input type="reset" value="reset">
             </form>
         </div>
@@ -37,5 +37,13 @@
     </div>
 </section>
 <jsp:include page="../../include/footer.jsp" />
+<script type="text/javascript">
+    function doLogin() {
+        let form = document.login_form;
+
+        // TODO form validation 체크
+        form.submit();
+    }
+</script>
 </body>
 </html>

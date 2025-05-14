@@ -4,14 +4,22 @@ import daelim.book.rental.kimdaelim.admin.account.AdminAccountVo;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public class AdminAccountDao {
     private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
     public AdminAccountDao(DataSource dataSource) {
@@ -31,7 +39,8 @@ public class AdminAccountDao {
         args.add(adminAccountVo.getId());
 
         sql += "password, ";
-        args.add(adminAccountVo.getPassword());
+        // args.add(adminAccountVo.getPassword());
+        args.add(bCryptPasswordEncoder.encode(adminAccountVo.getPassword()));
 
         sql += "name, ";
         args.add(adminAccountVo.getName());
@@ -54,17 +63,15 @@ public class AdminAccountDao {
         sql += "regDate, modDate) ";
 
         if(adminAccountVo.getId().equals("system")) {
-            sql += "VALUES (?,?,?,?,?,?,?,?,?, NOW(), NOW())";
+            sql += "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
         } else {
-            sql += "VALUES (?,?,?,?,?,?,?,?, NOW(), NOW())";
+            sql += "VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
         }
-
-        System.out.println(sql);
 
         int result = -1;
 
         try {
-            result = jdbcTemplate.update(sql, args);
+            result = jdbcTemplate.update(sql, args.toArray());
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -77,5 +84,37 @@ public class AdminAccountDao {
         int result = jdbcTemplate.queryForObject(sql, Integer.class, id);
 
         return result > 0;
+    }
+
+    public AdminAccountVo selectAdmin(AdminAccountVo adminAccountVo) {
+        String sql = "SELECT * FROM TB_ADMIN_ACCOUNT WHERE id = ? AND approval > 0";
+        List<AdminAccountVo> adminAccountVoList = new ArrayList<>();
+
+        try {
+            adminAccountVoList = jdbcTemplate.query(sql, new RowMapper<AdminAccountVo>() {
+                @Override
+                public AdminAccountVo mapRow(ResultSet rs, int rowNum) throws SQLException {
+                    AdminAccountVo adminAccountVo = new AdminAccountVo();
+
+                    adminAccountVo.setNo(rs.getInt("no"));
+                    adminAccountVo.setId(rs.getString("id"));
+                    adminAccountVo.setName(rs.getString("name"));
+                    adminAccountVo.setPassword(rs.getString("password"));
+                    adminAccountVo.setGender(rs.getString("gender"));
+                    adminAccountVo.setPart(rs.getString("part"));
+                    adminAccountVo.setPosition(rs.getString("position"));
+                    adminAccountVo.setEmail(rs.getString("email"));
+                    adminAccountVo.setPhone(rs.getString("phone"));
+                    adminAccountVo.setRegDate(rs.getString("regDate"));
+                    adminAccountVo.setModDate(rs.getString("modDate"));
+
+                    return adminAccountVo;
+                }
+            }, adminAccountVo.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return adminAccountVoList.size() == 0 ? null : adminAccountVoList.get(0);
     }
 }
