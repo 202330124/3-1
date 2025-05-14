@@ -26,9 +26,9 @@ public class AppConfig {
     public DataSource dataSource() {
         DataSource dataSource = new DataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://daelim-spring.ctss2wq4sozt.ap-northeast-2.rds.amazonaws.com:3306/daelim");
+        dataSource.setUrl("jdbc:mysql://daelim-spring.c1ckki2c2889.ap-northeast-2.rds.amazonaws.com/daelimdae?characterEncoding=utf8");
         dataSource.setUsername("admin");
-        dataSource.setPassword("admin1234");
+        dataSource.setPassword("daelimspring");
 
         dataSource.setInitialSize(5);
         dataSource.setMaxActive(10);
