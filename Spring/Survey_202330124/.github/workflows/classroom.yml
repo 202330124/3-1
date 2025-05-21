@@ -1,0 +1,21 @@
+name: GitHub Classroom Workflow
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # 수동 실행 옵션 추가
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: education/autograding@v1
+        with:
+          token: ${{ github.token }}

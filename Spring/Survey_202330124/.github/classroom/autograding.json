@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "프로젝트 컴파일 테스트",
+      "setup": "",
+      "run": "mvn clean compile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "컨트롤러 클래스 확인",
+      "setup": "",
+      "run": "find src -name '*Controller.java' | grep -q 'Controller'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Service 클래스 확인",
+      "setup": "",
+      "run": "find src -name '*Service.java' | grep -q 'Service'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "DAO 클래스 확인",
+      "setup": "",
+      "run": "find src -name '*Dao.java' | grep -q 'Dao'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    }
+  ]
+}
