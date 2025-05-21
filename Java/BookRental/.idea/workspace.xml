@@ -10,40 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a556f52d-975a-442e-8753-d8de2815c0f2" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_ng.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_ok.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/include/nav_cookie.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/AuthInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/LoginCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/WrongPasswordException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/controller/LoginCommandValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/webapp/WEB-INF/views/login/loginForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/webapp/WEB-INF/views/login/loginSuccess.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/webapp/WEB-INF/views/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/modify_account_form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b33f56a-9e16-4259-9a66-cbdf03255c42.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b33f56a-9e16-4259-9a66-cbdf03255c42/storage_v2/_src_/schema/daelim_library.hFWUXQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b33f56a-9e16-4259-9a66-cbdf03255c42/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b33f56a-9e16-4259-9a66-cbdf03255c42/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b33f56a-9e16-4259-9a66-cbdf03255c42/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b33f56a-9e16-4259-9a66-cbdf03255c42/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f1604c58-53cd-4699-92b9-1036545d1380.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f1604c58-53cd-4699-92b9-1036545d1380.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_ok.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/include/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/include/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/resources/messages/label.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/resources/messages/label.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/webapp/WEB-INF/views/login/loginForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/webapp/WEB-INF/views/login/loginForm.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -88,6 +72,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/202330124/Java/BookRental/src/main/webapp/WEB-INF/views/admin/account",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,6 +93,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.104" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.104" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="BookRental:war exploded">
@@ -218,6 +204,8 @@
       <workItem from="1747184717302" duration="13000" />
       <workItem from="1747198820955" duration="5076000" />
       <workItem from="1747203909616" duration="4774000" />
+      <workItem from="1747789789340" duration="157000" />
+      <workItem from="1747803874000" duration="8464000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@
 <html>
 <head>
     <jsp:include page="../../include/title.jsp" />
-    <link href="<c:url value='/resources/css/admin/login_form.css' />" rel="stylesheet" type="text/css">
+    <link href="<c:url value='/resources/css/admin/find_password_form.css' />" rel="stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="../../include/header.jsp" />
@@ -19,27 +19,29 @@
 <section>
     <div id="section_wrap">
         <div class="word">
-            <h3>LOGIN FORM</h3>
+            <h3>FIND PASSWORD FORM</h3>
+            <p>(We will send you a new password)</p>
         </div>
-        <div class="login_form">
-            <form method="post" action="<c:url value='/admin/account/loginConfirm' />" name="login_form">
+        <div class="find_password_form">
+            <form method="post" action="<c:url value='/admin/account/findPasswordConfirm' />" name="find_password_form">
                 <input type="text" name="id" placeholder="input admin id" /><br/>
-                <input type="password" name="password" placeholder="input admin password" /><br/>
+                <input type="text" name="name" placeholder="input admin name" /><br/>
+                <input type="text" name="email" placeholder="input admin email" /><br/>
 
-                <input type="button" value="login" onclick="doLogin()">
+                <input type="button" value="find password" onclick="findPassword()">
                 <input type="reset" value="reset">
             </form>
         </div>
-        <div class="find_password_create_account">
-            <a href="<c:url value='/admin/account/findPasswordForm' />" >find password</a>
+        <div class="create_account_login">
+            <a href="<c:url value='/admin/account/loginForm' />" >login</a>
             <a href="<c:url value='/admin/account/createAccountForm' />" >create account</a>
         </div>
     </div>
 </section>
 <jsp:include page="../../include/footer.jsp" />
 <script type="text/javascript">
-    function doLogin() {
-        let form = document.login_form;
+    function findPassword() {
+        let form = document.find_password_form;
 
         // TODO form validation 체크
         form.submit();

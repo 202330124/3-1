@@ -117,4 +117,65 @@ public class AdminAccountDao {
 
         return adminAccountVoList.size() == 0 ? null : adminAccountVoList.get(0);
     }
+
+    public AdminAccountVo selectAdmin(int no) {
+        String sql = "SELECT * FROM TB_ADMIN_ACCOUNT WHERE no = ?";
+        List<AdminAccountVo> adminAccountVoList = new ArrayList<>();
+
+        try {
+            adminAccountVoList = jdbcTemplate.query(sql, new RowMapper<AdminAccountVo>() {
+                @Override
+                public AdminAccountVo mapRow(ResultSet rs, int rowNum) throws SQLException {
+                    AdminAccountVo adminAccountVo = new AdminAccountVo();
+
+                    adminAccountVo.setNo(rs.getInt("no"));
+                    adminAccountVo.setId(rs.getString("id"));
+                    adminAccountVo.setName(rs.getString("name"));
+                    adminAccountVo.setPassword(rs.getString("password"));
+                    adminAccountVo.setGender(rs.getString("gender"));
+                    adminAccountVo.setPart(rs.getString("part"));
+                    adminAccountVo.setPosition(rs.getString("position"));
+                    adminAccountVo.setEmail(rs.getString("email"));
+                    adminAccountVo.setPhone(rs.getString("phone"));
+                    adminAccountVo.setRegDate(rs.getString("regDate"));
+                    adminAccountVo.setModDate(rs.getString("modDate"));
+
+                    return adminAccountVo;
+                }
+            }, no);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return adminAccountVoList.size() == 0 ? null : adminAccountVoList.get(0);
+    }
+
+    public int updateAdminAccount(AdminAccountVo adminAccountVo) {
+        String sql = "UPDATE TB_ADMIN_ACCOUNT SET "
+                + "name = ?, "
+                + "gender = ?, "
+                + "part = ?, "
+                + "position = ?, "
+                + "email = ?, "
+                + "phone = ?, "
+                + "modDate = NOW() "
+                + "WHERE no = ?";
+
+        int result = -1;
+
+        try {
+            result = jdbcTemplate.update(sql,
+                    adminAccountVo.getName(),
+                    adminAccountVo.getGender(),
+                    adminAccountVo.getPart(),
+                    adminAccountVo.getPosition(),
+                    adminAccountVo.getEmail(),
+                    adminAccountVo.getPhone(),
+                    adminAccountVo.getNo());
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
 }

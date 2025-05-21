@@ -62,4 +62,44 @@ public class AdminAccountController {
 
         return "/admin/home";
     }
+
+    @GetMapping("/modifyAccountForm")
+    public String modifyAccountForm(HttpSession session) {
+        String nextPage = "/admin/account/modify_account_form";
+
+        if(session.getAttribute("loginedAdminAccountVo") == null) {
+            nextPage = "/admin/account/login_form";
+        }
+
+        return nextPage;
+    }
+
+    @PostMapping("/modifyAccountConfirm")
+    public String modifyAccountConfirm(AdminAccountVo adminAccountVo, HttpSession session) {
+        String nextPage = "/admin/account/modify_account_ok";
+
+        int result = adminAccountService.modifyAccount(adminAccountVo);
+
+        if(result > 0) {
+            AdminAccountVo loginedAdminAccountVo = adminAccountService.getLoginedAdminAccountVo(adminAccountVo.getNo());
+            session.setAttribute("loginedAdminAccountVo", loginedAdminAccountVo);
+        } else {
+            nextPage = "/admin/account/modify_account_ng";
+        }
+
+        return nextPage;
+    }
+
+    @GetMapping("/findPasswordForm")
+    public String findPasswordForm() {
+        return "/admin/account/find_password_form";
+    }
+
+    @PostMapping("/findPasswordConfirm")
+    public String findPasswordConfirm(AdminAccountVo adminAccountVo) {
+        String nextPage = "/admin/account/find_password_ok";
+
+        // TODO service -> find password logic
+        return nextPage;
+    }
 }

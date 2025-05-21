@@ -14,7 +14,7 @@
         <div class="menu">
             <ul>
                 <li><a href="<c:url value='/admin/account/logoutConfirm' /> ">로그아웃</a></li>
-                <li><a href="<c:url value='/admin/account/createAccountForm' /> ">계정수정</a></li>
+                <li><a href="<c:url value='/admin/account/modifyAccountForm' /> ">계정수정</a></li>
 
                 <c:if test="${loginedAdminAccountVo.id eq 'system'}">
                     <li><a href="<c:url value='/admin/account/createAccountForm' /> ">관리자 목록</a></li>

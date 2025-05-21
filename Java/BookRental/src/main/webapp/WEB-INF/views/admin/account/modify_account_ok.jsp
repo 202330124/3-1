@@ -11,7 +11,7 @@
 <html>
 <head>
     <jsp:include page="../../include/title.jsp" />
-    <link href="<c:url value='/resources/css/admin/login_result.css' />" rel="stylesheet" type="text/css">
+    <link href="<c:url value='/resources/css/admin/modify_account_result.css' />" rel="stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="../../include/header.jsp" />
@@ -19,12 +19,7 @@
 <section>
     <div id="section_wrap">
         <div class="word">
-            <h3>LOGIN SUCCESS!!!</h3>
-        </div>
-
-        <div class="others">
-            <a href="<c:url value='/admin/account/logoutConfirm' />" >logout</a>
-            <a href="<c:url value='/admin/account/modifyAccountForm' />" >modify account</a>
+            <h3>MODIFY ADMIN ACCOUNT SUCCESS!!!</h3>
         </div>
     </div>
 </section>

@@ -10,23 +10,23 @@
 
 <html>
 <head>
-    <jsp:include page="../../include/title.jsp" />
-    <link href="<c:url value='/resources/css/admin/login_result.css' />" rel="stylesheet" type="text/css">
+  <jsp:include page="../../include/title.jsp" />
+  <link href="<c:url value='/resources/css/admin/find_password_result.css' />" rel="stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="../../include/header.jsp" />
 <jsp:include page="../include/nav.jsp" />
 <section>
-    <div id="section_wrap">
-        <div class="word">
-            <h3>LOGIN SUCCESS!!!</h3>
-        </div>
-
-        <div class="others">
-            <a href="<c:url value='/admin/account/logoutConfirm' />" >logout</a>
-            <a href="<c:url value='/admin/account/modifyAccountForm' />" >modify account</a>
-        </div>
+  <div id="section_wrap">
+    <div class="word">
+      <h3>새로운 비밀번호 생성에 실패했습니다.</h3>
     </div>
+
+    <div class="others">
+      <a href="<c:url value='/admin/account/createAccountForm' />" >create account</a>
+      <a href="<c:url value='/admin/account/loginForm' />" >login</a>
+    </div>
+  </div>
 </section>
 <jsp:include page="../../include/footer.jsp" />
 </body>

@@ -46,4 +46,13 @@ public class AdminAccountService {
 
         return null;
     }
+
+    public int modifyAccount(AdminAccountVo adminAccountVo) {
+        // dao -> modify call
+        return adminAccountDao.updateAdminAccount(adminAccountVo);
+    }
+
+    public AdminAccountVo getLoginedAdminAccountVo(int no) {
+        return adminAccountDao.selectAdmin(no);
+    }
 }
