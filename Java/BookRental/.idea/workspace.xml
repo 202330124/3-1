@@ -10,23 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a556f52d-975a-442e-8753-d8de2815c0f2" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/modify_account_form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Spring/Survey_202330124/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f1604c58-53cd-4699-92b9-1036545d1380.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f1604c58-53cd-4699-92b9-1036545d1380.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daelim/book/rental/kimdaelim/admin/AdminAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/account/login_ok.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/include/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/include/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/webapp/WEB-INF/views/login/loginForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/webapp/WEB-INF/views/login/loginForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/chapter10/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/java/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring/ch10/src/main/resources/messages/label.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/ch10/src/main/resources/messages/label.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -59,6 +47,7 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2wR8uuhozbp79fYS8CuNodYIbDM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -71,13 +60,17 @@
     "Tomcat 서버.Tomcat 9.0.104.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/202330124/Java/BookRental/src/main/webapp/WEB-INF/views/admin/account",
+    "last_opened_file_path": "C:/202330124/Java/BookRental/src/main/webapp/WEB-INF/views/admin/book",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -88,6 +81,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\202330124\Java\BookRental\src\main\webapp\WEB-INF\views\admin\book" />
       <recent name="C:\202330124\Java\BookRental\src\main\webapp\WEB-INF\views\admin\account" />
     </key>
   </component>
@@ -206,10 +200,18 @@
       <workItem from="1747203909616" duration="4774000" />
       <workItem from="1747789789340" duration="157000" />
       <workItem from="1747803874000" duration="8464000" />
+      <workItem from="1748394319962" duration="6000" />
+      <workItem from="1748408855302" duration="655000" />
+      <workItem from="1748409519603" duration="8187000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
 </project>
