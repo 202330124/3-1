@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class MemberDao {
@@ -89,5 +90,23 @@ public class MemberDao {
         System.out.println("Key: " + key);
 
         return null;
+    }
+
+    public List<Member> selectByRegdate(LocalDateTime from, LocalDateTime to) {
+        List<Member> results = jdbcTemplate.query(
+                "SELECT * FROM MEMBER WHERE REGDATE BETWEEN ? AND ? ORDER BY REGDATE DESC",
+                new MemberRowMapper(), from, to
+        );
+
+        return results;
+    }
+
+    public Member selectById(Long id) {
+        List<Member> results = jdbcTemplate.query(
+                "SELECT * FROM MEMBER WHERE id = ?",
+                new MemberRowMapper(), id
+        );
+
+        return results.isEmpty() ? null : results.get(0);
     }
 }
